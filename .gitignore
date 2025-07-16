@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+*.swp
+
+# Python egg files
+dist/
+build/
+*.egg-info/
+
+# Docker
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# Test and temp files
+*.bak
+*.tmp
+
+# Ignore local config
+*.local
