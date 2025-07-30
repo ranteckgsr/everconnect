@@ -1,9 +1,18 @@
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query, HTTPException
+from fastapi.responses import RedirectResponse
 from requests.auth import HTTPBasicAuth
 import requests
 import json
 
-app = FastAPI()
+app = FastAPI(
+    title="Everest Forms API",
+    description="API to fetch Everest Forms entries",
+    version="1.0.0"
+)
+
+@app.get("/", include_in_schema=False)
+async def root():
+    return RedirectResponse(url="/docs")
 
 @app.get("/entries")
 def get_entries(form_id: int = Query(...), status: str = "publish"):

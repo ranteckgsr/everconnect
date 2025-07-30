@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: everest-forms-api
+    env: docker
+    plan: free
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000
+    healthCheckPath: /docs  # FastAPI's built-in docs endpoint
